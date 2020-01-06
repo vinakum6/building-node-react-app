@@ -8,10 +8,6 @@ pipeline {
     }
     stages {
         stage('Build') {
-            env.NODEJS_HOME = "${tool node-13.5.0}"
-            env.PATH="${env.NODEJS_HOME};${env.PATH}"
-            echo ${env.PATH}
-            bat 'node -version'
             steps {
                 sh 'npm install'
             }
